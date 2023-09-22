@@ -49,6 +49,9 @@
 ---
 
 ## How to Build the Project <a name="build"></a>
+
+If you don't want to build download it from [here](https://github.com/heshanthenura/PassMan/releases)
+
 ### Make sure [Java](https://www.oracle.com/java/technologies/downloads/) and [Maven](https://maven.apache.org/download.cgi) is already installed and configured.
 
 - Go to project directory and run
