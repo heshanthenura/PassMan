@@ -1,7 +1,10 @@
 # <h1 align="center">PassMan</h1>
 <h2 align="center">Password manager made using JavaFX</h1>
+
 > Application is still under construction so there maybe security issues
+
 ---
+
 ## Menu
 
 - [Features](#app-features)
