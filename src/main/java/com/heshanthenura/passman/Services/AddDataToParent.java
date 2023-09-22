@@ -11,6 +11,7 @@ import java.io.IOException;
 public class AddDataToParent {
     public void AddDataToWebLinksNameHolder(String name,VBox WebLinksNameHolder){
         try {
+            
             FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource("WebData/webDataName.fxml"));
             Node webDataDesignRoot = loader.load();
 

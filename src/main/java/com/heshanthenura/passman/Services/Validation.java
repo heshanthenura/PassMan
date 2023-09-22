@@ -1,12 +1,17 @@
 package com.heshanthenura.passman.Services;
 
+import com.heshanthenura.passman.Controllers.MainController;
 import com.heshanthenura.passman.Database.Services.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
+
+import static com.heshanthenura.passman.Controllers.MainController.webLinksNameHolder;
+
 
 public class Validation {
 
@@ -95,7 +100,9 @@ public class Validation {
             confPassErrorMsg.setManaged(false);
             logger.info("All good Add data");
             new AddDataService().insertWebData(USER_NAME,url,username,password,name);
-
+            Stage closeStage =(Stage) errorMsg.getScene().getWindow();
+            closeStage.close();
+            new AddDataToParent().AddDataToWebLinksNameHolder(name,webLinksNameHolder);
         }
     }
 }

@@ -16,16 +16,17 @@ public class LoginService {
 
     public void Login(String username, String password, Text loginErrLbl) throws IOException {
         User user = RetrieveUserDetails.RetrieveUserByUsername(username);
-        if(password.equals(user.getPassword())){
-            logger.info("Login successfully");
-            loginErrLbl.setFill(Color.GREEN);
-            loginErrLbl.setVisible(true);
-            loginErrLbl.setManaged(true);
-            loginErrLbl.setText("Login Successfully");
-            UserManager.getInstance().setUsername(username);
-            new SceneService().changeScene("main.fxml",(Stage) loginErrLbl.getScene().getWindow());
-
-        }else{
+        if(user != null){
+            if(password.equals(user.getPassword())) {
+                logger.info("Login successfully");
+                loginErrLbl.setFill(Color.GREEN);
+                loginErrLbl.setVisible(true);
+                loginErrLbl.setManaged(true);
+                loginErrLbl.setText("Login Successfully");
+                UserManager.getInstance().setUsername(username);
+                new SceneService().changeScene("main.fxml", (Stage) loginErrLbl.getScene().getWindow());
+            }
+            }else{
             loginErrLbl.setVisible(true);
             loginErrLbl.setManaged(true);
             loginErrLbl.setFill(Color.RED);

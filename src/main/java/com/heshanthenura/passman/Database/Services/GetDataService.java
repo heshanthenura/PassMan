@@ -12,6 +12,11 @@ public class GetDataService {
     public static Logger logger = Logger.getLogger("info-logger");
 
     public void retrieveAllWebData(String username, VBox webLinksNameHolder) {
+        try{
+            webLinksNameHolder.getChildren().clear();
+        }catch (Exception e){
+
+        }
         String tableName = username + "_WebData";
         try (Connection conn = ConnectDB.connect();
              Statement stmt = conn.createStatement()) {

@@ -20,11 +20,13 @@ import java.util.logging.Logger;
 public class MainController implements Initializable {
 
 
+
     public Logger logger = Logger.getLogger("info-logger");
     public String USER_NAME = UserManager.getInstance().getUsername();
 
     @FXML
-    private VBox WebLinksNameHolder;
+    public  VBox WebLinksNameHolder;
+    public static VBox webLinksNameHolder;
 
     @FXML
     private Text webDataDetailName;
@@ -37,6 +39,8 @@ public class MainController implements Initializable {
 
     @FXML
     private Text webDataDetailUsername;
+
+
 
     @FXML
     void Logout(MouseEvent event) throws IOException {
@@ -63,5 +67,6 @@ public class MainController implements Initializable {
         WebDataDetailsNode.setWebDataDetailUsername(webDataDetailUsername);
         WebDataDetailsNode.setWebDataDetailPassword(webDataDetailPassword);
         WebDataDetailsNode.HideDetails();
+        webLinksNameHolder=WebLinksNameHolder;
     }
 }
