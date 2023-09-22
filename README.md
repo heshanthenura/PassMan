@@ -1,6 +1,8 @@
 # <h1 align="center">PassMan</h1>
 <h2 align="center">Password manager made using JavaFX</h1>
 
+#### If you are a UI designer and interested work on this project. Please [contact me](#contact)
+
 > Application is still under construction so there maybe security issues
 
 ---
@@ -9,7 +11,7 @@
 
 - [Features](#app-features)
 - [Services](#services)
-- [How to Build](#build)
+- [How to build](#build)
 - [How to use](#use)
 
 ---
@@ -80,3 +82,15 @@ java -jar target/my-javafx-app-1.0-SNAPSHOT.jar
 ### If you want to log out click on logout button top left corner
 
 <img align="center" alt="Alt Text" src="/screenshots/img_4.png"/>
+
+
+### If you're interested in custom application development or would like to discuss a project, please don't hesitate to contact me.
+
+<a name="contact"></a>
+<ul>
+    <li><a href="https://twitter.com/Heshantk">Twitter</a></li>
+    <li><a href="https://www.linkedin.com/in/heshanthenura">LinkedIn</a></li>
+    <li><a href="https://www.instagram.com/heshan_thenura/">Instagram</a></li>
+    <li><a href="https://youtube.com/@heshanthenura">YouTube</a></li>
+    <li><a href="https://www.tiktok.com/@heshanthenura">TikTok</a></li>
+</ul>
