@@ -1,6 +1,6 @@
 # <h1 align="center">PassMan</h1>
 <h2 align="center">Password manager made using JavaFX</h1>
->Application is still under construction so there maybe security issues
+> Application is still under construction so there maybe security issues
 ---
 ## Menu
 
@@ -58,9 +58,22 @@ java -jar target/my-javafx-app-1.0-SNAPSHOT.jar
 
 ## How to Use <a name="use"></a>
 
-<img alt="Alt Text" src="/screenshots/img.png"/>
-
+<img align="center" alt="Alt Text" src="/screenshots/img.png"/>
 
 ### If you are using this app for first time, click on register and register with a unique username and password
+
+<img align="center" alt="Alt Text" src="/screenshots/img_1.png"/>
+
 ### And then login using username and password that you used to register
-### Click on Add
+
+### Click on *Add Website Detail* and Name for your website link, website url, username and password and click on save
+
+<img align="center" alt="Alt Text" src="/screenshots/img_2.png"/>
+
+### Then you can click on name you use when adding the details then you can see added data
+
+<img align="center" alt="Alt Text" src="/screenshots/img_3.png"/>
+
+### If you want to log out click on logout button top left corner
+
+<img align="center" alt="Alt Text" src="/screenshots/img_4.png"/>
