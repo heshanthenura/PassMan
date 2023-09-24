@@ -44,25 +44,25 @@
 ### SQLite Databse service
 - We store all data in SQLite database service
 
-### Maven
-- We use maven for manage dependencies
+### Gradle
+- We use gradle for manage dependencies
 ---
 
-## How to Build the Project <a name="build"></a>
+## How to Build JAR file<a name="build"></a>
 
 If you don't want to build download it from [here](https://github.com/heshanthenura/PassMan/releases)
 
-### Make sure [Java](https://www.oracle.com/java/technologies/downloads/) and [Maven](https://maven.apache.org/download.cgi) is already installed and configured.
+### Make sure [Java](https://www.oracle.com/java/technologies/downloads/) and [Gradle](https://gradle.org/install/) is already installed and configured.
 
 - Go to project directory and run
 ```
-mvn clean install
+gradle jar
 ```
-- Above command will compile your JavaFX application, bundle it with its dependencies, and create an executable JAR file in the target/ directory.
+- Above command will compile your JavaFX application, bundle it with its dependencies, and create an executable JAR file in the build/libs directory.
 ```
-java -jar target/my-javafx-app-1.0-SNAPSHOT.jar
+java -jar build/libs/PassMan-1.0-SNAPSHOT.jar
 ```
-- That's it! You've successfully built a JavaFX project using Maven. You can now distribute and run your JavaFX application using the generated JAR file.
+- That's it! You've successfully built a JavaFX project using Gradle. You can now distribute and run your JavaFX application using the generated JAR file.
 
 ## How to Use <a name="use"></a>
 
