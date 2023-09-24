@@ -41,8 +41,8 @@
 
 ## Services <a name="services"></a>
 
-### H2 Databse service
-- We store all data in H2 database service
+### SQLite Databse service
+- We store all data in SQLite database service
 
 ### Maven
 - We use maven for manage dependencies

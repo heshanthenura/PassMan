@@ -1,7 +1,6 @@
 package com.heshanthenura.passman.Database.Services;
 
 import com.heshanthenura.passman.Database.Entities.User;
-import com.heshanthenura.passman.Database.Services.RetrieveUserDetails;
 import com.heshanthenura.passman.Services.SceneService;
 import com.heshanthenura.passman.Services.UserManager;
 import javafx.scene.paint.Color;

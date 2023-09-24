@@ -17,7 +17,7 @@ public class SceneService {
         FXMLLoader loader = new FXMLLoader(MainApplication.class.getResource(fxmlName));
         Parent root = loader.load();
         Stage newStage = stage;
-        javafx.scene.Scene nextScene = new javafx.scene.Scene(root, w, h);
+        Scene nextScene = new Scene(root, w, h);
         newStage.setScene(nextScene);
     }
 
