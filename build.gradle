@@ -26,7 +26,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.heshanthenura.passman'
-    mainClass = 'com.heshanthenura.passman.HelloApplication'
+    mainClass = 'com.heshanthenura.passman.Launcher'
 }
 
 javafx {
@@ -35,13 +35,23 @@ javafx {
 }
 
 dependencies {
-    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
 
 test {
     useJUnitPlatform()
+}
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'com.heshanthenura.passman.Launcher'
+    }
+    archiveBaseName = 'PassManJAR'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }
 
 jlink {
@@ -54,14 +64,4 @@ jlink {
 
 jlinkZip {
     group = 'distribution'
-}
-mainClassName = 'com.heshanthenura.passmangradle.MainApplication'
-jar {
-    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
-    manifest {
-        attributes 'Main-Class': 'com.heshanthenura.passman.BuildMainApplication'
-    }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
 }
