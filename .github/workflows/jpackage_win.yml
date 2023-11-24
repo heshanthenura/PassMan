@@ -33,7 +33,7 @@ jobs:
 
       - name: Check jpackage availability
         run: |
-          jpackage --input build\libs\ --name PackageDemo --main-jar PackageDemoJAR-1.0-SNAPSHOT.jar --main-class com.heshanthenura.packagedemo.Launcher --type msi --win-dir-chooser --dest build\win\ --win-menu --win-shortcut --app-version 1.0 --vendor "Heshan Thenura"
+          jpackage --input build\libs\ --name PassMan --main-jar PassManJAR-1.0-SNAPSHOT.jar --main-class com.heshanthenura.passman.Launcher --type msi --win-dir-chooser --dest build\win\ --win-menu --win-shortcut --app-version 1.0 --vendor "Heshan Thenura" --icon icon/icon.png
 
       - name: List contents of build/win directory
         run: dir build\win
@@ -45,7 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v1.0
-          release_name: JpackageDemo-win
+          release_name: PassMan-win
           draft: false
           prerelease: false
 
@@ -56,6 +56,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/win/PackageDemo-1.0.msi
-          asset_name: PackageDemo-win.msi
+          asset_path: build/win/PassMan-1.0.msi
+          asset_name: PassMan-win.msi
           asset_content_type: application/octet-stream

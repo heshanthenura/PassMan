@@ -32,7 +32,7 @@ jobs:
         run: ./gradlew customFatJar
 
       - name: Check jpackage availability
-        run: jpackage --input build/libs/ --name PackageDemo --main-jar PackageDemoJAR-1.0-SNAPSHOT.jar --main-class com.heshanthenura.packagedemo.Launcher --type deb --dest build/linux/ --app-version 1.0 --vendor "Heshan Thenura"
+        run: jpackage --input build/libs/ --name PassMan --main-jar PassManJAR-1.0-SNAPSHOT.jar --main-class com.heshanthenura.passman.Launcher --linux-shortcut --type deb --dest build/linux/ --app-version 1.0 --vendor "Heshan Thenura" --icon icon/icon.png --linux-shortcut
 
       - name: List contents of build/linux directory
         run: ls -l build/linux
@@ -40,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: PackageDemo-linux
+          name: PassMan-linux
           path: build/linux/*
 
       - name: Create release
@@ -50,7 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: linux-v1.0
-          release_name: JpackageDemo-linux
+          release_name: PassMan-linux
           draft: false
           prerelease: false
 
@@ -61,6 +61,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/linux/packagedemo_1.0-1_amd64.deb
-          asset_name: PackageDemo-linux.deb
+          asset_path: build/linux/passman.0-1_amd64.deb
+          asset_name: PassMan-linux.deb
           asset_content_type: application/octet-stream
